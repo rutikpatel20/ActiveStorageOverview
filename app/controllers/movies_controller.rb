@@ -42,11 +42,6 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-  def show_file
-    file = ActiveStorage::Attachment.find(params[:id])
-
-  end
-
   def delete_file
     file = ActiveStorage::Attachment.find(params[:id])
     file.purge
